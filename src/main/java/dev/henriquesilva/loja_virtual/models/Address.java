@@ -1,6 +1,7 @@
 package dev.henriquesilva.loja_virtual.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import dev.henriquesilva.loja_virtual.enums.AddressType;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -33,6 +34,9 @@ public class Address implements Serializable {
     @JoinColumn(name = "person_id")
     @JsonIgnore
     private Person person;
+
+    @Enumerated(EnumType.STRING)
+    private AddressType addressType;
 
     public long getId() {
         return id;
@@ -104,6 +108,22 @@ public class Address implements Serializable {
 
     public void setDefaultAddress(boolean defaultAddress) {
         this.defaultAddress = defaultAddress;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public AddressType getAddressType() {
+        return addressType;
+    }
+
+    public void setAddressType(AddressType addressType) {
+        this.addressType = addressType;
     }
 
     @Override
