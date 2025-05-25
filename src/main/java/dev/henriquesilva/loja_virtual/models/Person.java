@@ -1,4 +1,4 @@
-package dev.henriquesilva.loja_virtual.model;
+package dev.henriquesilva.loja_virtual.models;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;

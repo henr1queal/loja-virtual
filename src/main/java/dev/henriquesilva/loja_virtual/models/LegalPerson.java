@@ -1,8 +1,6 @@
-package dev.henriquesilva.loja_virtual.model;
+package dev.henriquesilva.loja_virtual.models;
 
 import jakarta.persistence.*;
-
-import java.util.Date;
 
 @Entity
 @Table(name = "legal_person")
